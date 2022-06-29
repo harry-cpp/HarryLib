@@ -19,7 +19,7 @@ jobs:
         with:
           dotnet-version: '6.0.x'
       - name: Build library
-        run: dotnet publish -c Release
+        run: dotnet pack -c Release
       - name: Upload artifacts
         uses: actions/upload-artifact@main
         with:
