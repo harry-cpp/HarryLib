@@ -41,7 +41,7 @@ jobs:
           name: nuget-ubuntu-latest
           path: nuget-ubuntu
       - name: Push packages
-        run: dotnet nuget push nuget-ubuntu/*.nupkg --source https://nuget.pkg.github.com/$GITHUB_REPOSITORY_OWNER/index.json --api-key ${GITHUB_TOKEN}
+        run: dotnet nuget push **/*.nupkg --source https://nuget.pkg.github.com/$GITHUB_REPOSITORY_OWNER/index.json --api-key ${GITHUB_TOKEN}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
